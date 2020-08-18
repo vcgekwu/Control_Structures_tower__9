@@ -1,5 +1,6 @@
 ---
 # tasks file for systems
+  - include_vars: group_vars/prod.yml
   - name: create systems users
     user: 
       name: "{{ item.key }}"

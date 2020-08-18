@@ -36,8 +36,9 @@
     state: link
 
 - name: add application configs
+  become: yes
   template:
-    src: config.ini.j2
+    src: "config.ini.j2"
     dest: /var/www/html/app/config.ini
     owner: "{{ apache.user }}"
     group: "{{ apache.group }}"
